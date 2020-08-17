@@ -1,0 +1,7 @@
+{
+  "database": {
+      "name": "url-shortener-db",
+      "url": "localhost",
+      "port": 27017
+  }
+}
