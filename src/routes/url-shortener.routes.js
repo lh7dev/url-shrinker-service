@@ -1,5 +1,5 @@
-import express from "express";
-import {shrinkUrl, listUrlRecords} from "../controllers/url-shortener.controller";
+const express = require("express");
+const shrinkerCtrl = require("../controllers/url-shortener.controller");
 
 const router = express.Router();
 
@@ -19,12 +19,14 @@ router.use(validateRequest);
 
 // Returns a list of urls
 router.get("/", (req, res) => {
-  listUrlRecords(req, res);
+  shrinkerCtrl.listUrlRecords(req, res);
 });
 
 // Takes original URL and shrink it
 router.post("/shrink_url", (req, res) => {
-    shrinkUrl(req, res);
+  shrinkerCtrl.shrinkUrl(req, res);
 });
 
-export const URLShortenerRoutes = router;
+module.exports = {
+  URLShortenerRoutes: router
+} 

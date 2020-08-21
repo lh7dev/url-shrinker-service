@@ -1,5 +1,5 @@
-import express from "express";
-import { redirectToOriginal } from "../controllers/short-url-navigation.controller";
+const express = require("express");
+const redirectToOriginal = require("../controllers/short-url-navigation.controller");
 
 const router = express.Router();
 
@@ -9,4 +9,6 @@ router.get("/:shortUrl", (req, res) => {
   redirectToOriginal(shortUrl, res);
 });
 
-export const ShortUrlRoutes = router;
+module.exports = {
+  ShortUrlRoutes: router
+}
