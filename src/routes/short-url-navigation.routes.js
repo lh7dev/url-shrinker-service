@@ -1,5 +1,8 @@
 const express = require("express");
 const redirectToOriginal = require("../controllers/short-url-navigation.controller");
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+ 
 
 const router = express.Router();
 

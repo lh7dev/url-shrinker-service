@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js --exec babel-node -e js"
+    "start": "node ./src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lester Herrera",
   "license": "ISC",
+  "engines": {
+    "node": "8"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

@@ -26,10 +26,18 @@ app
   .get("*", (_, res) => {
     res.status(404).json({
       success: false,
-      error: "Endpoint not found",
+      error: "Shrunked Url not found",
     });
   });
 
+
+/*
+// Run in local server 
 app.listen(PORT, () =>
   console.log(`url-shortener-service is running on port ${PORT}`)
 );
+ */
+
+ // firebase function entry point
+ // Run in firebase function environment
+ module.exports = app;
