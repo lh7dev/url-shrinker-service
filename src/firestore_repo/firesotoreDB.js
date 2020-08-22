@@ -1,6 +1,6 @@
 /* eslint-disable promise/catch-or-return */
 const admin = require("firebase-admin");
-const serviceAccount = require("../../config/url-shrinker-d285a-firebase-adminsdk-j1v12-6acb9a2ec6.json");
+const serviceAccount = require("../../config/url-shrinker.firestoreKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
